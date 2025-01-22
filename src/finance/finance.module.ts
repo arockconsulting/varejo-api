@@ -7,7 +7,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import {
   ContasAPagar,
   ContasAPagarSchema,
-} from 'src/infra/entities/contasAPagar.schema';
+} from '../infra/entities/contasAPagar.schema';
 import { ContasAPagarService } from './contasapagar.service';
 import { ContasapagarController } from './contasapagar.controller';
 

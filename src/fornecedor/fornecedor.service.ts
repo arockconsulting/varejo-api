@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Fornecedor } from 'src/infra/entities/fornecedor.schema';
+import { Fornecedor } from '../infra/entities/fornecedor.schema';
 import { CreateFornecedorDto, UpdateFornecedorDto } from './dto/fornecedor.dto';
 
 @Injectable()

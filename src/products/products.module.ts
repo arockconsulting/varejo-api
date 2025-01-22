@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ProductController } from './product.controller';
 import { ProductService } from './product.service';
-import { ProductSchema } from 'src/infra/entities/product.schema';
+import { ProductSchema } from '../infra/entities/product.schema';
 import { MongooseModule } from '@nestjs/mongoose';
 import { StockService } from './stock.service';
-import { Estoque, EstoqueSchema } from 'src/infra/entities/estoque.schema';
+import { Estoque, EstoqueSchema } from '../infra/entities/estoque.schema';
 import { StockController } from './stock.controller';
 
 @Module({

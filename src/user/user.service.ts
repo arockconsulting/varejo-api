@@ -5,7 +5,7 @@ https://docs.nestjs.com/providers#services
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { User, UserDocument } from 'src/infra/entities/user,schema';
+import { User, UserDocument } from '../infra/entities/user,schema';
 import * as bcrypt from 'bcrypt';
 
 @Injectable()

@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 import { PaymentMethodService } from './payment-method.service';
 import { CreatePaymentMethodDto } from './dtos/create-payment-method.dto';
-import { PaymentMethod } from 'src/infra/entities/payment-method.schema';
+import { PaymentMethod } from '../infra/entities/payment-method.schema';
 import { UpdatePaymentMethodDto } from './dtos/update-payment-method.dto';
 
 @Controller('payment-methods')

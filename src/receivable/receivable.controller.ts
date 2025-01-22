@@ -12,7 +12,7 @@ import {
 } from '@nestjs/common';
 import { ReceivableService } from './receivable.service';
 import { CreateReceivableDto } from './dtos/create-receivable.dto';
-import { Receivable } from 'src/infra/entities/receivable.schema';
+import { Receivable } from '../infra/entities/receivable.schema';
 
 @Controller('receivables')
 export class ReceivableController {

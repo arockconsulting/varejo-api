@@ -6,7 +6,7 @@ import { ClientModule } from 'src/client/client.module';
 import {
   Receivable,
   ReceivableSchema,
-} from 'src/infra/entities/receivable.schema';
+} from '../infra/entities/receivable.schema';
 import { OrderModule } from 'src/order/order.module';
 import { PaymentMethodModule } from 'src/paymentMethod/payment-method.module';
 

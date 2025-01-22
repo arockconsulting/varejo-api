@@ -3,7 +3,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { ClientService } from 'src/client/client.service';
-import { Order } from 'src/infra/entities/order.schema';
+import { Order } from '../infra/entities/order.schema';
 import { PaymentMethodService } from 'src/paymentMethod/payment-method.service';
 import { CreateReceivableDto } from 'src/receivable/dtos/create-receivable.dto';
 import { ReceivableService } from 'src/receivable/receivable.service';

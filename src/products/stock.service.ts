@@ -5,9 +5,9 @@
 import { Injectable } from '@nestjs/common';
 import * as xml2js from 'xml2js'; // Entidade do Produto
 import { ProductService } from './product.service';
-import { Product } from 'src/infra/entities/product.schema';
+import { Product } from '../infra/entities/product.schema';
 import { InjectModel } from '@nestjs/mongoose';
-import { Estoque } from 'src/infra/entities/estoque.schema';
+import { Estoque } from '../infra/entities/estoque.schema';
 import { Model } from 'mongoose';
 
 @Injectable()

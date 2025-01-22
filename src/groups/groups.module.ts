@@ -4,7 +4,7 @@ https://docs.nestjs.com/modules
 
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose/dist/mongoose.module';
-import { Group, GroupSchema } from 'src/infra/entities/group.schema';
+import { Group, GroupSchema } from '../infra/entities/group.schema';
 import { GroupController } from './group.controller';
 import { GroupService } from './group.service';
 

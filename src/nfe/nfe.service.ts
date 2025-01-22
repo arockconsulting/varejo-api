@@ -16,7 +16,7 @@ import { NFe } from 'node-nfe';
 import * as puppeteer from 'puppeteer';
 import * as fs from 'fs';
 import { ClientService } from 'src/client/client.service';
-import { Nfe } from 'src/infra/entities/nfe.schema';
+import { Nfe } from '../infra/entities/nfe.schema';
 import { OrderService } from 'src/order/order.service';
 import { ProductService } from 'src/products/product.service';
 import { UserService } from 'src/user/user.service';

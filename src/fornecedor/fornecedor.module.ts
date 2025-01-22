@@ -9,7 +9,7 @@ import { Module } from '@nestjs/common';
 import {
   Fornecedor,
   FornecedorSchema,
-} from 'src/infra/entities/fornecedor.schema';
+} from '../infra/entities/fornecedor.schema';
 
 @Module({
   imports: [

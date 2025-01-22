@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 import { ClientService } from './client.service';
 import { CreateClientDto } from './dtos/create-client.dto';
-import { Client } from 'src/infra/entities/client.schema';
+import { Client } from '../infra/entities/client.schema';
 import { UpdateClientDto } from './dtos/update-client.dto';
 
 @Controller('clients')

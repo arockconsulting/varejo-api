@@ -8,7 +8,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { ContasAPagarService } from 'src/finance/contasapagar.service';
 import { FornecedorService } from 'src/fornecedor/fornecedor.service';
-import { NfeEntrada } from 'src/infra/entities/nfeEntrada.schema';
+import { NfeEntrada } from '../infra/entities/nfeEntrada.schema';
 import { CreateProductDto } from 'src/products/dtos/create-product.dto';
 import { ProductService } from 'src/products/product.service';
 

@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { PaymentMethod } from 'src/infra/entities/payment-method.schema';
+import { PaymentMethod } from '../infra/entities/payment-method.schema';
 import { CreatePaymentMethodDto } from './dtos/create-payment-method.dto';
 import { UpdatePaymentMethodDto } from './dtos/update-payment-method.dto';
 

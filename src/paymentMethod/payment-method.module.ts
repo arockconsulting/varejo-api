@@ -8,7 +8,7 @@ import { Module } from '@nestjs/common';
 import {
   PaymentMethod,
   PaymentMethodSchema,
-} from 'src/infra/entities/payment-method.schema';
+} from '../infra/entities/payment-method.schema';
 import { PaymentMethodService } from './payment-method.service';
 
 @Module({

@@ -13,7 +13,7 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { Order } from 'src/infra/entities/order.schema';
+import { Order } from '../infra/entities/order.schema';
 import { UpdateOrderDto } from './dtos/update-order.dto';
 import { CreateOrderDto } from './dtos/create-order.dto';
 import { OrderService } from './order.service';

@@ -10,7 +10,7 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 import { GroupService } from './group.service';
-import { Group } from 'src/infra/entities/group.schema';
+import { Group } from '../infra/entities/group.schema';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { UpdateGroupDto } from './dtos/update-group.dto';
 import { CreateGroupDto } from './dtos/create-group.dto';

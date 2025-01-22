@@ -12,12 +12,12 @@ import { UserModule } from 'src/user/user.module';
 import { ClientModule } from 'src/client/client.module';
 import { OrderModule } from 'src/order/order.module';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Nfe, NfeSchema } from 'src/infra/entities/nfe.schema';
+import { Nfe, NfeSchema } from '../infra/entities/nfe.schema';
 import { CertificadoService } from './certificado.service';
 import {
   NfeEntrada,
   NfeEntradaSchema,
-} from 'src/infra/entities/nfeEntrada.schema';
+} from '../infra/entities/nfeEntrada.schema';
 import { NfeEntradaService } from './nfeentrada.service';
 
 @Module({

@@ -14,7 +14,7 @@ import {
 } from '@nestjs/common';
 import { ContasAPagarService } from 'src/finance/contasapagar.service';
 import { FornecedorService } from 'src/fornecedor/fornecedor.service';
-import { Nfe } from 'src/infra/entities/nfe.schema';
+import { Nfe } from '../infra/entities/nfe.schema';
 import { ProductService } from 'src/products/product.service';
 import { StockService } from 'src/products/stock.service';
 import { EmitirNfeDto } from 'src/sefaz/dto/emitir-nfe.dto';

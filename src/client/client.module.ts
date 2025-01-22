@@ -6,7 +6,7 @@ https://docs.nestjs.com/modules
 
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Client, ClientSchema } from 'src/infra/entities/client.schema';
+import { Client, ClientSchema } from '../infra/entities/client.schema';
 
 @Module({
   imports: [
