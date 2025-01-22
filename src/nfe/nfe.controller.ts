@@ -17,7 +17,7 @@ import { FornecedorService } from 'src/fornecedor/fornecedor.service';
 import { Nfe } from '../infra/entities/nfe.schema';
 import { ProductService } from 'src/products/product.service';
 import { StockService } from 'src/products/stock.service';
-import { EmitirNfeDto } from 'src/sefaz/dto/emitir-nfe.dto';
+import { EmitirNfeDto } from '../sefaz/dto/emitir-nfe.dto';
 import { CreateNfeDto } from './dto/create-nfe.dto';
 import { UpdateNfeDto } from './dto/update-nfe.dto';
 import { NfeService } from './nfe.service';
