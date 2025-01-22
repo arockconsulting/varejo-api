@@ -14,7 +14,7 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 import { CategoriesService } from './categories.service';
-import { Category } from 'src/infra/entities/catgories.schema';
+import { Category } from '../infra/entities/catgories.schema';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { UpdateCategoryDto } from './dtos/update-category.dto';
 import { CreateCategoryDto } from './dtos/create-category.dto';
