@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>DANFE</title>
+    <style>
+        body { font-family: sans-serif; font-size: 10px; }
+        .container { width: 100%; max-width: 800px; margin: 0 auto; padding: 10px; }
+        .header { text-align: center; margin-bottom: 20px; }
+        .header h1 { margin-bottom: 5px; }
+        .info { margin-bottom: 10px; }
+        .table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .table th, .table td { border: 1px solid black; padding: 5px; text-align: left; }
+        .total { text-align: right; font-weight: bold; }
+        .transport { margin-top: 20px; }
+        .transport p { margin: 2px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DANFE</h1>
+            <p>Documento Auxiliar da Nota Fiscal Eletrônica</p>
+        </div>
+
+        <div class="info">
+            <p><strong>Chave de Acesso:</strong> {{nfe.accessKey}}</p>
+            <p><strong>Data de Emissão:</strong> {{format nfe.dataEmissao 'dd/MM/yyyy HH:mm:ss'}}</p>
+            <p><strong>Fornecedor:</strong> {{nfe.supplierName}}</p>
+            <p><strong>Cliente:</strong> {{nfe.client.name}}</p>
+            <p><strong>Vendedor:</strong> {{nfe.seller.username}}</p>
+        </div>
+
+        <h2>Itens</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th>Desconto</th>
+                    <th>Subtotal</th>
+                    <th>NCM</th>
+                    <th>CFOP</th>
+                    <th>CST</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each nfe.items}}
+                <tr>
+                    <td>{{this.product.name}}</td>
+                    <td>{{this.quantity}}</td>
+                    <td>{{this.price}}</td>
+                    <td>{{this.discount}}</td>
+                    <td>{{formatNumber (subtract (multiply this.price this.quantity) this.discount) 2}}</td>
+                    <td>{{this.product.ncm}}</td>
+                    <td>{{this.product.cfop}}</td>
+                     <td>{{this.product.cst}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+        <div class="total">
+            <p><strong>Total:</strong> R$ {{formatNumber nfe.total 2}}</p>
+        </div>
+
+        <div class="transport">
+            <h3>Transportadora</h3>
+            <p><strong>CNPJ:</strong> {{nfe.transp?.transporta?.CNPJ}}</p>
+            <p><strong>Nome:</strong> {{nfe.transp?.transporta?.xNome}}</p>
+            <p><strong>IE:</strong> {{nfe.transp?.transporta?.IE}}</p>
+            <p><strong>Endereço:</strong> {{nfe.transp?.transporta?.xEnder}}</p>
+            <p><strong>Município:</strong> {{nfe.transp?.transporta?.xMun}}</p>
+            <p><strong>UF:</strong> {{nfe.transp?.transporta?.UF}}</p>
+        </div>
+
+         <div class="transport">
+            <h3>Veículo</h3>
+            <p><strong>Placa:</strong> {{nfe.transp?.veicTransp?.placa}}</p>
+            <p><strong>UF:</strong> {{nfe.transp?.veicTransp?.UF}}</p>
+            <p><strong>RNTC:</strong> {{nfe.transp?.veicTransp?.RNTC}}</p>
+        </div>
+
+        <div class="transport">
+            <h3>Reboque</h3>
+            <p><strong>Placa:</strong> {{nfe.transp?.reboque?.placa}}</p>
+            <p><strong>UF:</strong> {{nfe.transp?.reboque?.UF}}</p>
+            <p><strong>RNTC:</strong> {{nfe.transp?.reboque?.RNTC}}</p>
+        </div>
+         <div class="transport">
+            <h3>Volumes</h3>
+            <p><strong>Quantidade:</strong> {{nfe.transp?.vol?.qVol}}</p>
+            <p><strong>Espécie:</strong> {{nfe.transp?.vol?.esp}}</p>
+            <p><strong>Marca:</strong> {{nfe.transp?.vol?.marca}}</p>
+            <p><strong>Número:</strong> {{nfe.transp?.vol?.nVol}}</p>
+            <p><strong>Peso Líquido:</strong> {{nfe.transp?.vol?.pesoL}}</p>
+            <p><strong>Peso Bruto:</strong> {{nfe.transp?.vol?.pesoB}}</p>
+        </div>
+    </div>
+</body>
+</html>

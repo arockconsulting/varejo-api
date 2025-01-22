@@ -1,0 +1,145 @@
+{
+  "infNFe": {
+    "ide": {
+      "cUF": "35", // Código da UF (São Paulo)
+      "natOp": "Venda de Mercadoria",
+      "mod": "55", // Modelo 55 (NFe)
+      "serie": "1",
+      "nNF": "1",
+      "dhEmi": "2024-07-26T10:00:00-03:00", // Data e hora de emissão
+      "tpNF": "1", // 1=Saída, 0=Entrada
+      "idDest": "1", // 1=Operação interna, 2=Operação interestadual, 3=Operação com exterior
+      "tpImp": "1", // 1=Impressão normal, 2=Impressão em contingência
+      "tpEmis": "1", // 1=Emissão normal
+      "tpAmb": "2", // 1=Produção, 2=Homologação
+      "finNFe": "1", // 1=NFe normal, 2=NFe complementar, 3=NFe de ajuste, 4=Devolução de mercadoria
+      "indFinal": "0", // 0=Não consumidor final, 1=Consumidor final
+      "indPres": "1" // 1=Operação presencial, 2=Operação não presencial
+    },
+    "emit": {
+      "CNPJ": "seu-cnpj",
+      "xNome": "Nome do Emitente",
+      "enderEmit": {
+        "xLgr": "Rua do Emitente",
+        "nro": "123",
+        "xCpl": "Apto 101",
+        "xBairro": "Bairro do Emitente",
+        "cMun": "3550308", // Código do município (São Paulo)
+        "xMun": "São Paulo",
+        "UF": "SP",
+        "CEP": "01000000",
+        "cPais": "1058", // Código do país (Brasil)
+        "xPais": "Brasil"
+      },
+      "IE": "123456789012",
+      "CRT": "3" // 1=Simples Nacional, 2=Simples Nacional - excesso de sublimite, 3=Regime Normal
+    },
+    "dest": {
+      "CNPJ": "cnpj-destinatario",
+      "xNome": "Nome do Destinatário",
+      "enderDest": {
+        "xLgr": "Rua do Destinatário",
+        "nro": "456",
+        "xBairro": "Bairro do Destinatário",
+        "cMun": "3550308", // Código do município (São Paulo)
+        "xMun": "São Paulo",
+        "UF": "SP",
+        "CEP": "02000000",
+        "cPais": "1058",
+        "xPais": "Brasil"
+      },
+      "indIEDest": "1", // 1=Contribuinte ICMS, 2=Contribuinte Isento, 9=Não Contribuinte
+      "IE": "123456789012"
+    },
+    "det": [
+      {
+        "nItem": "1",
+        "prod": {
+          "cProd": "123",
+          "cEAN": "7891234567890",
+          "xProd": "Produto 1",
+          "NCM": "12345678",
+          "CFOP": "5102",
+          "uCom": "un",
+          "qCom": "1",
+          "vUnCom": "10.00",
+          "vProd": "10.00",
+          "cEANTrib": "7891234567890",
+          "uTrib": "un",
+          "qTrib": "1",
+          "vUnTrib": "10.00"
+        },
+        "imposto": {
+          "ICMS": {
+            "ICMS00": {
+              "orig": "0",
+              "CST": "00",
+              "modBC": "3",
+              "vBC": "10.00",
+              "pICMS": "18.00",
+              "vICMS": "1.80"
+            }
+          },
+          "IPI": {
+            "IPINT": {
+              "CST": "53"
+            }
+          },
+          "PIS": {
+            "PISAliq": {
+              "CST": "01",
+              "vBC": "10.00",
+              "pPIS": "1.65",
+              "vPIS": "0.17"
+            }
+          },
+          "COFINS": {
+            "COFINSAliq": {
+              "CST": "01",
+              "vBC": "10.00",
+              "pCOFINS": "7.60",
+              "vCOFINS": "0.76"
+            }
+          }
+        }
+      }
+    ],
+    "total": {
+      "ICMSTot": {
+        "vBC": "10.00",
+        "vICMS": "1.80",
+        "vICMSDeson": "0.00",
+        "vFCP": "0.00",
+        "vBCST": "0.00",
+        "vST": "0.00",
+        "vFCPST": "0.00",
+        "vFCPSTRet": "0.00",
+        "vProd": "10.00",
+        "vFrete": "0.00",
+        "vSeg": "0.00",
+        "vDesc": "0.00",
+        "vII": "0.00",
+        "vIPI": "0.00",
+        "vPIS": "0.17",
+        "vCOFINS": "0.76",
+        "vOutro": "0.00",
+        "vNF": "10.00",
+        "vTotTrib": "0.00"
+      }
+    },
+    "transp": {
+      "modFrete": "9"
+    },
+    "pag": {
+      "detPag": [
+        {
+          "tPag": "01",
+          "vPag": "10.00"
+        }
+      ]
+    },
+    "infAdic": {
+      "infCpl": "Informações adicionais da NFe"
+    }
+  }
+}
